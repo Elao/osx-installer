@@ -1,0 +1,5 @@
+---
+- name: install
+  homebrew: >
+    name=git
+    state=present

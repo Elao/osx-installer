@@ -1,0 +1,11 @@
+---
+- name: Install virtualbox
+  homebrew_cask: name=virtualbox state=present
+
+- name: Install vagrant
+  homebrew_cask: name=vagrant state=present
+
+# install plugins
+- name: Install vagrant plugins
+  command: /usr/bin/vagrant plugin install {{ item }}
+  with_items: plugins

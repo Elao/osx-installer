@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  roles:
+    - { role: vagrant, plugins: ['landrush']}
+    - { role: zsh, plugins: "git"}
+    - git

@@ -1,0 +1,23 @@
+---
+- name: clone
+  git: >
+    repo=https://github.com/robbyrussell/oh-my-zsh.git
+    dest={{ ansible_env.HOME }}/.oh-my-zsh
+    update=no
+  sudo: no
+
+- name: template
+  shell: >
+    cp {{ ansible_env.HOME }}/.oh-my-zsh/templates/zshrc.zsh-template {{ ansible_env.HOME }}/.zshrc
+    creates={{ ansible_env.HOME }}/.zshrc
+  sudo: no
+
+- name: plugins
+  lineinfile: >
+    dest={{ ansible_env.HOME }}/.zshrc
+    line="plugins=({{ plugins }})"
+    regexp="plugins=\(.*\)"
+
+- name: shell
+  shell: chsh -s /bin/zsh
+  when: ansible_env.SHELL != "/bin/zsh"
