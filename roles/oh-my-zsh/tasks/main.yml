@@ -1,9 +1,15 @@
 ---
+- name: clone check
+  stat:
+    path: {{ ansible_env.HOME }}/.oh-my-zsh
+  register: result
+  sudo: yes
+
 - name: clone
   git: >
     repo=https://github.com/robbyrussell/oh-my-zsh.git
     dest={{ ansible_env.HOME }}/.oh-my-zsh
-    update=no
+  when: not result.stat.exists
   sudo: no
 
 - name: template
