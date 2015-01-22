@@ -1,7 +1,7 @@
 ---
 - name: clone check
   stat:
-    path: {{ ansible_env.HOME }}/.oh-my-zsh
+    path: "{{ ansible_env.HOME }}/.oh-my-zshgit"
   register: result
   sudo: yes
 
