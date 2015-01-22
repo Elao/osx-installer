@@ -8,6 +8,10 @@ Easily configure your osx installation with our standard stack
 - Git
 
 
+## Requirements
+
+In order to run this script you need to install the osx command line tools, homebrew, homebrew cask and ansible
+
 ## Installation
 
 ```
