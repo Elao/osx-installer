@@ -4,3 +4,18 @@
     - { role: vagrant, plugins: ['landrush']}
     - { role: oh-my-zsh, plugins: "git"}
     - git
+
+  vars_prompt:
+    user_name: "what is your name?"
+    user_email: "what is your email?"
+
+  # git configuration
+  tasks:
+    - name: global .gitignore
+      template: >
+        src=templates/git/gitignore.j2
+        dest={{ ansible_env.HOME }}/.gitignore_global
+    - name: .gitconfig
+      template: >
+        src=templates/git/gitconfig.j2
+        dest={{ ansible_env.HOME }}/.gitconfig

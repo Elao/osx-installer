@@ -1,0 +1,26 @@
+[user]
+    name = {{ user_name }}
+    email = {{ user_email }}
+
+[color]
+    ui = true
+
+[alias]
+    amend = commit --amend
+    st = status
+    who = shortlog -sne
+    undo = reset --soft HEAD^
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+
+[core]
+    excludesfile = {{ ansible_env.HOME }}/.gitignore_global
+
+[mergetool]
+    keepBackup = true
+
+[push]
+    default = simple
+
+[credential]
+    helper = osxkeychain
