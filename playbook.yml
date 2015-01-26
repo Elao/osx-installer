@@ -11,6 +11,10 @@
     user_name: "what is your name?"
     user_email: "what is your email?"
 
+  vars:
+    applications:
+      - google-chrome
+
   # git configuration
   tasks:
     - name: global .gitignore
