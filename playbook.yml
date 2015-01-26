@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   roles:
+    - homebrew-cask
     - { role: vagrant, plugins: ['landrush']}
     - { role: oh-my-zsh, plugins: "git"}
     - git
