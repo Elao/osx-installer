@@ -5,6 +5,7 @@
     - { role: vagrant, plugins: ['landrush']}
     - { role: oh-my-zsh, plugins: "git"}
     - git
+    - php
     - ponysay
 
   vars_prompt:
