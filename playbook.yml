@@ -5,6 +5,7 @@
     - { role: vagrant, plugins: ['landrush']}
     - { role: oh-my-zsh, plugins: "git"}
     - git
+    - ponysay
 
   vars_prompt:
     user_name: "what is your name?"

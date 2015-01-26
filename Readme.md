@@ -6,10 +6,16 @@ Easily configure your osx installation with our standard stack
 - Vagrant (with the landrush plugin)
 - Zsh & Oh-My-Zsh
 - Git
+- Homebrew Cask
+
+Plus, the wonderful...
+
+- Ponysay
 
 ## Requirements
 
-In order to run this script you need to install the osx command line tools, homebrew, homebrew cask and ansible
+In order to run this script you need to install the osx command line tools,
+homebrew and ansible
 
 ## Installation
 
