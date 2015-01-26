@@ -18,7 +18,7 @@ Plus, the wonderful...
 ## Requirements
 
 In order to run this script you need to install the osx command line tools,
-homebrew and ansible
+homebrew, ansible and wget.
 
 ## Installation
 
