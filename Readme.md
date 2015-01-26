@@ -7,6 +7,8 @@ Easily configure your osx installation with our standard stack
 - Zsh & Oh-My-Zsh
 - Git
 - Homebrew Cask
+- Atom Editor
+- Php 5.6
 
 Plus, the wonderful...
 
@@ -20,7 +22,7 @@ homebrew and ansible
 ## Installation
 
 ```
-wget -O installer.zip https://github.com/elao/osx-installer/archive/master.zip
+wget -O installer.zip https://github.com/emerick42/osx-installer/archive/master.zip
 unzip installer
 cd installer
 ansible-playbook -i hosts -K playbook.yml
