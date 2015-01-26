@@ -1,0 +1,5 @@
+---
+- name: install
+  homebrew: >
+    name=php56
+    state=present

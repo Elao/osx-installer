@@ -5,10 +5,18 @@
     - { role: vagrant, plugins: ['landrush']}
     - { role: oh-my-zsh, plugins: "git"}
     - git
+    - php
+    - ponysay
 
   vars_prompt:
     user_name: "what is your name?"
     user_email: "what is your email?"
+
+  vars:
+    applications:
+      - google-chrome
+      - atom
+      - adium
 
   # git configuration
   tasks:
@@ -20,3 +28,5 @@
       template: >
         src=templates/git/gitconfig.j2
         dest={{ ansible_env.HOME }}/.gitconfig
+    - name: ponysay
+      lineinfile: dest={{ ansible_env.HOME}}/.zshrc line="ponysay -q"

@@ -1,0 +1,5 @@
+---
+- name: install
+  homebrew: >
+    name=ponysay
+    state=present
