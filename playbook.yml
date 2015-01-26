@@ -21,3 +21,5 @@
       template: >
         src=templates/git/gitconfig.j2
         dest={{ ansible_env.HOME }}/.gitconfig
+    - name: ponysay
+      lineinfile: dest={{ ansible_env.HOME}}/.zshrc line="ponysay -q"
