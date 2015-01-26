@@ -9,6 +9,7 @@ Easily configure your osx installation with our standard stack
 - Homebrew Cask
 - Atom Editor
 - Php 5.6
+- Adium
 
 Plus, the wonderful...
 
