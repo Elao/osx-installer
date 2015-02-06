@@ -1,9 +1,6 @@
 ---
-- name: tap phinze/cask
-  homebrew_tap: tap=phinze/cask state=present
-
-- name: tap caskroom/versions
-  homebrew_tap: tap=caskroom/versions state=present
+- name: tap caskroom/cask
+  homebrew_tap: tap=caskroom/cask state=present
 
 - name: install
   homebrew: >
