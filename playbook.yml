@@ -1,7 +1,6 @@
 ---
 - hosts: localhost
   roles:
-    - homebrew-cask
     - { role: vagrant, plugins: ['landrush']}
     - { role: oh-my-zsh, plugins: "git"}
     - git
@@ -10,8 +9,21 @@
     user_name: "what is your name?"
     user_email: "what is your email?"
 
-  # git configuration
+  vars:
+    applications:
+      - adium
+      - dropbox
+      - owncloud
+      - skype
+      - vagrant-manager
+
   tasks:
+    # Install application with brew cask
+    - name: Install applications with cask
+      homebrew_cask: name={{ item }} state=present
+      with_items: applications
+
+    # git configuration
     - name: global .gitignore
       template: >
         src=templates/git/gitignore.j2
