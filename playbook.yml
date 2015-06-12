@@ -28,7 +28,7 @@
     - name: global .gitignore
       template: >
         src=templates/git/gitignore.j2
-        dest={{ ansible_env.HOME }}/.gitignore_global
+        dest={{ ansible_env.HOME }}/.gitignore
     - name: .gitconfig
       template: >
         src=templates/git/gitconfig.j2
