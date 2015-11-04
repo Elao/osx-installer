@@ -7,5 +7,5 @@
 
 # install plugins
 - name: Install vagrant plugins
-  command: /usr/bin/vagrant plugin install {{ item }}
+  command: vagrant plugin install {{ item }}
   with_items: plugins
